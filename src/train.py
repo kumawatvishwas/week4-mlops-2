@@ -27,6 +27,7 @@ def evaluate_model(model, X_test, y_test):
 
 def main():
     X, y = load_data("data/iris.csv")
+    #train test split
     X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=y, test_size=0.4, random_state=42)
     clf = train_model(X_train, y_train)
     accuracy = evaluate_model(clf, X_test, y_test)
